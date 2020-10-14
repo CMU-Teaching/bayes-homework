@@ -1,0 +1,100 @@
+---
+title: "HW3 - The number game"
+author: "Your name"
+date: "Date of submission"
+output: 
+html_document: 
+highlight: tango
+theme: spacelab
+---
+
+```{r setup, include = FALSE}
+# DO NOT ALTER CODE IN THIS CHUNK
+
+# Note: if you have not yet installed the relevant packages, 
+# you'll need to install them with the code below
+# install.packages("tidyverse")
+# install.packages("glue")
+
+library(tidyverse)
+library(glue)
+```
+
+* * *
+
+#### Problem 1: 
+
+```{r mathematical-hypotheses}
+evens <- function() {
+  tibble(name = "evens", set = list(seq(2,100,2)))
+}
+
+odds <- function() {
+ 
+}
+
+squares <- function() {
+
+}
+  
+cubes <- function() {
+
+}
+  
+primes <- function() {
+
+}  
+
+
+multiples <- function() {
+  tibble(name = map_chr(3:12, ~glue("multiples of {.x}")),
+         set = map(3:12, ~seq(.x, 100, .x)))
+}
+  
+powers <- function() {
+
+ 
+}
+```
+
+#### Problem 2: 
+
+```{r make-all-hypotheses}
+make_all_hypotheses <- function(lambda) {
+  
+}
+```
+
+#### Problem 3: 
+
+```{r compute-likelihood}
+compute_likelihood <- function(set, numbers) {
+  
+}
+```
+
+#### Problem 4: 
+
+```{r best-hypotheses}
+best_hypotheses <- function(hypotheses, numbers, top_n = 10) {
+
+}
+```
+
+#### Problem 5: 
+```{r inference-tests}
+
+```
+
+#### Problem 6: 
+```{r smaller-lambda}
+
+
+```
+
+#### Problem 7: 
+```{r predict-value}
+predict_value <- function(hypotheses, previous_numbers, new_number) {
+  
+}
+```
